@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to the #{title}
+	p Enter your divination in the box below:
+	form(action="/iching/divine", method="post")
+		input(type="text", name="primary", id="divination_id")
+		input(type="submit", value="Send")
